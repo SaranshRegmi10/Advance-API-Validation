@@ -1,0 +1,44 @@
+1. Create a user (POST: api/users)
+
+--what we send
+{
+    "name":"Saransh"
+    "job":"QA Automation"
+}
+--what the server repsonds
+{
+    "name":"Saransh"
+    "job":"QA Automation"
+    "id":782
+    "Created At":"2026-07-31T10:45:12.345Z"
+}
+
+2. Fetching an Existing User(GET: /api/users/2)
+
+-- WHAT THE SERVER RESPONDS WITH (Response - 200 OK):
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions are appreciated!"
+    }
+}
+
+3. User Login (POST: /api/login)
+
+-- WHAT YOU SEND (Request):
+{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}
+
+WHAT THE SERVER RESPONDS WITH (Response - 200 OK):
+{
+    "token": "QpwL5tke4PnpJA7X"
+}
