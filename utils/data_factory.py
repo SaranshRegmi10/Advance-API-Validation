@@ -44,3 +44,15 @@ class UserDataFactory:
             job= fake.job()
         )
 
+    @staticmethod
+    def invalid_user_payload():
+        """
+        Generates a list of tuples containing (name,payload and status code)
+        Used for data-driven negative testing
+        """
+        return [
+            ("missing_name",{"job":"Developer"},400),
+            ("missing_job",{"name":"Saransh"},400),
+            ("empty_string",{"name":"","jobx`":""},400),
+            ("null_values",{"name":None,"job":None},400)
+        ]
